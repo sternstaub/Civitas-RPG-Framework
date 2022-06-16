@@ -1,0 +1,6 @@
+name: CivitasRPG
+version: '${project.version}'
+main: io.github.sternstaub.civitasrpg.CivitasRPG
+api-version: 1.19
+authors: [ sternstaub ]
+website: fallenstar.de
