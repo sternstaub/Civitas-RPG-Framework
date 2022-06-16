@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="added readmes">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/textformat/CivitasTextFormatter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chatformat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chat/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" afterDir="false" />
+    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="add some bits">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/events/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/items/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/npc/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/xpsystem/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,13 +46,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "/home/jonas/it-programming/IDEA-Projects/civitas/src/main/java/io/github/sternstaub/civitasrpg/xpsystem"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/xpsystem" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/events" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/items" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/npc" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg" />
     </key>
@@ -82,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655350121647</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add some bits">
+      <created>1655352584876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655352584876</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,6 +112,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some packages" />
     <MESSAGE value="added readmes" />
-    <option name="LAST_COMMIT_MESSAGE" value="added readmes" />
+    <MESSAGE value="add some bits" />
+    <option name="LAST_COMMIT_MESSAGE" value="add some bits" />
   </component>
 </project>
