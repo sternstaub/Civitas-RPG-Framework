@@ -1,16 +1,14 @@
 Guilds are basically the frontend of factions. 
 
-While factions are used rather in the background 
-(for organizing stuff like permissions), guilds are kind of a "supergroup" for factions;
-a guild is like a container for the factions.
+Guilds are kind of a "supergroup" for factions, containing at least 1 faction each.
 
-Each guild needs to contain at least 1 faction. 
+They always have one leader who can manage the factions which are members of the guild 
+(adding them to a town occupied by the guild, for example). Also, factions may only be created and 
+only exist within a guild.
 
-
-Guilds, on the other hand, will have 
-a more direct impact on the player's ingame experience. They always have one leader
-who can manage the factions in the guild (adding them to a town occupied by the guild,
-for example)
+The guild leader will not have total control over the factions tho. A faction might 
+decide that they want to split apart from their parent guild, declaring themselves as the main
+faction of a new guild while leaving the old one in the process.
 
 They will come with functions like... 
 * PvP-prevention

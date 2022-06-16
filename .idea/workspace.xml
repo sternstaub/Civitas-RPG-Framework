@@ -4,14 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="added some packages">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chatformat/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/factions/README.md" afterDir="false" />
+    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="added readmes">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/textformat/CivitasTextFormatter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/factions/package-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chatformat/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chat/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/package-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +21,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,6 +54,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -70,7 +75,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655348128800</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added readmes">
+      <created>1655350121647</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655350121647</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -86,6 +98,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added some packages" />
-    <option name="LAST_COMMIT_MESSAGE" value="added some packages" />
+    <MESSAGE value="added readmes" />
+    <option name="LAST_COMMIT_MESSAGE" value="added readmes" />
   </component>
 </project>
