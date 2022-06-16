@@ -6,7 +6,7 @@
 
     <groupId>io.github.sternstaub</groupId>
     <artifactId>CivitasRPG</artifactId>
-    <version>0.0.1-b1</version>
+    <version>0.0.1-b2</version>
     <packaging>jar</packaging>
 
     <name>CivitasRPG</name>
