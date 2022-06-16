@@ -1,6 +1,7 @@
 package io.github.sternstaub.civitasrpg.config;
 
 import io.github.sternstaub.civitasrpg.CivitasRPG;
+import io.github.sternstaub.civitasrpg.config.mainconfig.Locale;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.jetbrains.annotations.NotNull;
 
@@ -18,12 +19,12 @@ public class CivitasLocaleLoader {
 
     }
 
-    @NotNull
-    /**
-     * @return the message associated to the given lang-key, or the key (if no value can be found for it)
+
+    /*
+      @return the message associated to the given lang-key, or the key (if no value can be found for it)
      */
     public String fetch(Locale localeKey) {
-        return langYaml.getString(localeKey.getYamlKey());
+        return langYaml.getString(localeKey.yamlKey);
     }
 
 

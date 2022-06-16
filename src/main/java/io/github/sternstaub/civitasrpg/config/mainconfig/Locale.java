@@ -1,7 +1,10 @@
-package io.github.sternstaub.civitasrpg.config;
+package io.github.sternstaub.civitasrpg.config.mainconfig;
 
 public enum Locale {
-    PLUGIN_INIT_CONFIG("plugin.init.config", "Initializing Config...");
+    PLUGIN_INITIALIZATION_COMPLETE("plugin.init_complete",
+            "Initialization complete!")
+
+    ;
 
 
 
@@ -11,13 +14,9 @@ public enum Locale {
         return defaultMessage;
     }
 
-    String defaultMessage;
+    final String defaultMessage;
 
-    public String getYamlKey() {
-        return yamlKey;
-    }
-
-    String yamlKey;
+    public final String yamlKey;
     Locale(String yamlKey, String defaultMessage) {
         this.yamlKey = yamlKey;
         this.defaultMessage = defaultMessage;

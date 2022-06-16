@@ -1,6 +1,10 @@
-package io.github.sternstaub.civitasrpg.config;
+package io.github.sternstaub.civitasrpg.config.mainconfig;
 
-public enum ConfigInt {
+/**
+ * Enum to store configuration keys and their corresponding default values.
+ * Only contains Int values, as opposed to ConfigString and ConfigDouble.
+ */
+public enum MainConfigInt {
     MENGE_BROT("plugin.brot", 1);
 
 
@@ -12,7 +16,7 @@ public enum ConfigInt {
      * @param entryPath path of the configuration entry, as given in yaml-files
      * @param defaultValue the default value of the configuration entry
      */
-    ConfigInt(String entryPath, int defaultValue) {
+    MainConfigInt(String entryPath, int defaultValue) {
         this.entryPath = entryPath;
         this.defaultValue = defaultValue;
     }
