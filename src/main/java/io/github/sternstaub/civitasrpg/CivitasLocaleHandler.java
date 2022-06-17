@@ -1,21 +1,19 @@
-package io.github.sternstaub.civitasrpg.config;
+package io.github.sternstaub.civitasrpg;
 
-import io.github.sternstaub.civitasrpg.CivitasRPG;
-import io.github.sternstaub.civitasrpg.config.mainconfig.Locale;
+import io.github.sternstaub.civitasrpg.config.LocaleEntry;
 import org.bukkit.configuration.file.YamlConfiguration;
-import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 import java.io.IOException;
 
-public class CivitasLocaleLoader {
+public class CivitasLocaleHandler {
 
     private static final CivitasRPG plugin = CivitasRPG.INSTANCE;
     private File langFile;
     private YamlConfiguration langYaml;
     final String localeFolderPath = CivitasRPG.INSTANCE.dataPath + "lang/";
 
-    public CivitasLocaleLoader() {
+    public CivitasLocaleHandler() {
 
     }
 
@@ -23,7 +21,7 @@ public class CivitasLocaleLoader {
     /*
       @return the message associated to the given lang-key, or the key (if no value can be found for it)
      */
-    public String fetch(Locale localeKey) {
+    public String fetch(LocaleEntry localeKey) {
         return langYaml.getString(localeKey.yamlKey);
     }
 
@@ -39,7 +37,7 @@ public class CivitasLocaleLoader {
         langYaml = YamlConfiguration.loadConfiguration(langFile);
 
         // Iterate through config options enum and check if one is missing in the yaml.
-        for(Locale loc : Locale.values()) {
+        for(LocaleEntry loc : LocaleEntry.values()) {
             if (!langYaml.contains(loc.yamlKey)) {
 
                 //if there is no entry for a language key in the given Yaml, create it with a default value:

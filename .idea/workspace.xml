@@ -5,23 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="Configuration and Localization loaders have been expanded to work with multiple config files and folders.&#10;The work concerning config is still not done tho. Next will be flatfile storage.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigTypes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/entries/ConfigEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/entries/ConfigEntryType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/CivitasMainConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigDouble.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/CivilizationObjectConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/ConfigEntryTypeMismatchException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasConfigHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigRoots.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/main/CivitasMainConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/BuildingConfigEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/CivitasCivilizationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/ConfigIdentifierNotFoundException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasLocaleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasLocaleLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigInt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigInt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigString.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/Locale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/Locale.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigLoader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasLocaleLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasLocaleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigTypes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/entries/ConfigEntry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/entries/ConfigEntryType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/CivitasMainConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/Locale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/LocaleEntry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigDouble.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigInt.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/mainconfig/MainConfigString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/CivilizationObjectConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/ConfigEntryTypeMismatchException.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +39,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="package-info" />
+        <option value="Class" />
         <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -123,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655369187900</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Configuration and Localization loaders have been expanded to work with multiple config files and folders.&#10;The work concerning config is still not done tho. Next will be flatfile storage.">
+      <created>1655417231571</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655417231571</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
