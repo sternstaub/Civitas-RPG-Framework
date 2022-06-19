@@ -2,8 +2,8 @@ package io.github.sternstaub.civitasrpg;
 
 import io.github.sternstaub.civitasrpg.handlers.CivitasConfigHandler;
 import io.github.sternstaub.civitasrpg.handlers.CivitasLocaleHandler;
-import io.github.sternstaub.civitasrpg.handlers.config.ConfigValue;
-import io.github.sternstaub.civitasrpg.handlers.config.LocaleEntry;
+import io.github.sternstaub.civitasrpg.flags.MainConfigFlag;
+import io.github.sternstaub.civitasrpg.flags.LocaleFlag;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -63,7 +63,7 @@ public final class CivitasRPG extends JavaPlugin {
 
         // First, load the locale key (like en, nl, de...) as configured by user.
         String language = config.MAINCONFIG.getString(
-                ConfigValue.LANGUAGE);
+                MainConfigFlag.LANGUAGE);
 
         /*
         Then buffer the lang messages for given locale key  into the CivitasLocaleLoader so that the messages can be fetched via the plugin.
@@ -74,9 +74,10 @@ public final class CivitasRPG extends JavaPlugin {
         // get debugging setting.
         // when true, the plugin will log more messages to console
         // in various situations.
-        isDebug = config.MAINCONFIG.getBool(ConfigValue.DEBUG);
+        isDebug = config.MAINCONFIG.getBool(MainConfigFlag.DEBUG);
+        debug(this, "Debugging is on.");
 
-        log(locale(LocaleEntry.PLUGIN_INITIALIZATION_COMPLETE));
+        log(locale(LocaleFlag.PLUGIN_INITIALIZATION_COMPLETE));
     }
 
 
@@ -123,7 +124,7 @@ public final class CivitasRPG extends JavaPlugin {
     ==========
      */
 
-    public String locale(LocaleEntry loc) {
+    public String locale(LocaleFlag loc) {
         return locale.fetch(loc); }
 
 
@@ -138,10 +139,17 @@ public final class CivitasRPG extends JavaPlugin {
         this.getLogger().log(Level.INFO, message);
     }
 
+    private String lastDebuggedClassName= "";
     public void debug(Object o, String message) {
-        if(isDebug) {
-            log("[DEBUG - Class " + o.getClass().getSimpleName() + "] "
-                    + message);
-        }
+
+        if(!isDebug)
+            return;
+
+        if(!o.getClass().getSimpleName().equalsIgnoreCase(lastDebuggedClassName))
+            log("============================================");
+        lastDebuggedClassName = o.getClass().getSimpleName();
+
+        log("[DEBUG - Class " + o.getClass().getSimpleName() + "] "
+                + message);
     }
 }

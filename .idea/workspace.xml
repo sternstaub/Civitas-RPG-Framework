@@ -4,50 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="Changes in configuration classes, restructured some other stuff.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/ConditionParametersClassMismatchException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NoCivitasConfigConditionParametersPassedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NoValidValueTypForConfigConditionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NumericConfigConditionOutOfBoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/civilization/buildings/BuildingTypeFlag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasBuildingHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasDataHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasEventHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasItemHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasMainConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigRoot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueCondition.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfigKey.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfigMeta.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/ui/textformat/CivitasTextFormatter.java" afterDir="false" />
+    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="Introducing ConfigValueCondition, several implementations for config packs">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/BuildingConfigFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/MainConfigFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/Building.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigPack.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueConditionRanged.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/building/BuildingConfigPack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasConfigHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasLocaleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasLocaleHandler.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/chat/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/events/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/commands/civRpgCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/commands/civRpgCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasConfigFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/CivitasConfigPack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasConfigPack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/ConfigRoots.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/LocaleEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/LocaleEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/main/CivitasMainConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/BuildingConfigEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/config/subconfig/civilization/CivitasCivilizationConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/events/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/items/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/guilds/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/factions/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/guilds/factions/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/items/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/npc/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/npc/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/rpgclasses/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading/TradingPartner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/TradingPartner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading/globaltrading/TradingRestriction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/globaltrading/TradingRestriction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/ui/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/ui/textformat/CivitasTextFormatter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/xpsystem/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/civilization/buildings/BuildingTypeFlag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasBuildingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasBuildingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasConfigHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasItemHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasLocaleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasLocaleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasConfigPack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/CivitasMainConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/MainConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigRoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/RootConfigFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValue.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/LocaleEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/LocaleFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/building/BuildingConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfigKey.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/civilization/BuildingConfigMeta.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/events/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/guilds/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/guilds/factions/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/items/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/npc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/rpgclasses/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/TradingPartner.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/trading/globaltrading/TradingRestriction.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/ui/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/ui/textformat/CivitasTextFormatter.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655499640523</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Introducing ConfigValueCondition, several implementations for config packs">
+      <created>1655611545068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655611545068</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -185,6 +184,7 @@
     <MESSAGE value="Configuration and Localization loaders added" />
     <MESSAGE value="Configuration and Localization loaders have been expanded to work with multiple config files and folders.&#10;The work concerning config is still not done tho. Next will be flatfile storage." />
     <MESSAGE value="Changes in configuration classes, restructured some other stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes in configuration classes, restructured some other stuff." />
+    <MESSAGE value="Introducing ConfigValueCondition, several implementations for config packs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Introducing ConfigValueCondition, several implementations for config packs" />
   </component>
 </project>

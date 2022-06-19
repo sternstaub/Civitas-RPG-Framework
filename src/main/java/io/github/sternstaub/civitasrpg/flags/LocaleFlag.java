@@ -1,6 +1,6 @@
-package io.github.sternstaub.civitasrpg.handlers.config;
+package io.github.sternstaub.civitasrpg.flags;
 
-public enum LocaleEntry {
+public enum LocaleFlag {
     PLUGIN_INITIALIZATION_COMPLETE("plugin.init_complete",
             "Initialization complete!")
 
@@ -17,7 +17,7 @@ public enum LocaleEntry {
     final String defaultMessage;
 
     public final String yamlKey;
-    LocaleEntry(String yamlKey, String defaultMessage) {
+    LocaleFlag(String yamlKey, String defaultMessage) {
         this.yamlKey = yamlKey;
         this.defaultMessage = defaultMessage;
     }

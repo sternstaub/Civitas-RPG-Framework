@@ -1,7 +1,7 @@
 package io.github.sternstaub.civitasrpg.handlers;
 
 import io.github.sternstaub.civitasrpg.CivitasRPG;
-import io.github.sternstaub.civitasrpg.handlers.config.LocaleEntry;
+import io.github.sternstaub.civitasrpg.flags.LocaleFlag;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -22,7 +22,7 @@ public class CivitasLocaleHandler {
     /*
       @return the message associated to the given lang-key, or the key (if no value can be found for it)
      */
-    public String fetch(LocaleEntry localeKey) {
+    public String fetch(LocaleFlag localeKey) {
         return langYaml.getString(localeKey.yamlKey);
     }
 
@@ -38,7 +38,7 @@ public class CivitasLocaleHandler {
         langYaml = YamlConfiguration.loadConfiguration(langFile);
 
         // Iterate through config options enum and check if one is missing in the yaml.
-        for(LocaleEntry loc : LocaleEntry.values()) {
+        for(LocaleFlag loc : LocaleFlag.values()) {
             if (!langYaml.contains(loc.yamlKey)) {
 
                 //if there is no entry for a language key in the given Yaml, create it with a default value:

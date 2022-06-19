@@ -1,5 +1,7 @@
 package io.github.sternstaub.civitasrpg.handlers.config;
 
+import io.github.sternstaub.civitasrpg.flags.MainConfigFlag;
+import io.github.sternstaub.civitasrpg.flags.RootConfigFlag;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -7,17 +9,19 @@ import java.io.IOException;
 import io.github.sternstaub.civitasrpg.CivitasRPG;
 import org.jetbrains.annotations.NotNull;
 
-public abstract class CivitasConfigFile {
+public abstract class ConfigFile {
     public final String configRootPath;
     public final String filename;
     public static final CivitasRPG plugin = CivitasRPG.INSTANCE;
+    public final RootConfigFlag root;
 
     public final File file;
     public final YamlConfiguration yamlConfig;
 
-    protected CivitasConfigFile(String configRootPath, String filename) {
+    protected ConfigFile(String configRootPath, String filename, RootConfigFlag root) {
         this.configRootPath = configRootPath;
         this.filename = filename;
+        this.root = root;
 
         this.file = new File(configRootPath + filename);
         this.yamlConfig = YamlConfiguration.loadConfiguration(file);
@@ -31,17 +35,17 @@ public abstract class CivitasConfigFile {
     // #######################################
     // ###################### GETTERS #######
     // ###################################
-    public String getString(@NotNull ConfigValue mce) {
+    public String getString(@NotNull MainConfigFlag mce) {
         return yamlConfig.getString(mce.key);
     }
-    public int getInt(@NotNull ConfigValue mce) {
+    public int getInt(@NotNull MainConfigFlag mce) {
         return yamlConfig.getInt(mce.key);
     }
-    public double getDouble(@NotNull ConfigValue mce) {
+    public double getDouble(@NotNull MainConfigFlag mce) {
         return yamlConfig.getDouble(mce.key);
     }
 
-    public boolean getBool(@NotNull ConfigValue mce) {
+    public boolean getBool(@NotNull MainConfigFlag mce) {
         return yamlConfig.getBoolean(mce.key);
     }
 
@@ -53,16 +57,6 @@ public abstract class CivitasConfigFile {
     public void save () throws IOException {
         plugin.debug(this, "Saving config file to "
                 + file.getAbsolutePath());
-        if(this instanceof CivitasConfigPack) {
-            CivitasConfigPack pack = (CivitasConfigPack) this;
-            plugin.debug(this,
-                    "Found config pack with a root named " + pack.root.toString());
-            for(CivitasConfigFile ccf : pack.getPackSubConfigFiles()) {
-                ccf.save();
-                plugin.debug(this,
-                        "Saving subconfig" + ccf.filename);
-            }
-        }
         yamlConfig.save(file);
     }
 

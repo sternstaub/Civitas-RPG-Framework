@@ -1,9 +1,8 @@
-package io.github.sternstaub.civitasrpg.handlers.config;
+package io.github.sternstaub.civitasrpg.flags;
 
 import io.github.sternstaub.civitasrpg.CivitasRPG;
-import io.github.sternstaub.civitasrpg.handlers.config.civilization.BuildingConfigMeta;
 
-public enum ConfigRoot {
+public enum RootConfigFlag {
     MAIN(""),
 
     BUILDINGS("buildings/")
@@ -12,7 +11,7 @@ public enum ConfigRoot {
 
     public final String folderPath;
     // public final boolean isPack;
-    ConfigRoot(String rootfolder) {
+    RootConfigFlag(String rootfolder) {
         this.folderPath = rootfolder;
         CivitasRPG.INSTANCE.debug(this, this.toString()+" wurde konstruiert.");
     }
