@@ -4,13 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/civilization/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/factions/package-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/guilds/package-info.java" afterDir="false" />
+    <list default="true" id="923eef1c-d15e-4317-98c6-723fd8c738f7" name="Changes" comment="smoothened config classes, restructured packages (again)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/BuildingType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/interfaces/UpgradeableBuilding.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/types/Anchor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigEntry.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/flags/BuildingFlag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/flags/MainConfigFlag.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/CivitasRPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/ConditionParametersClassMismatchException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/backend/exceptions/ConfigEntryClassMismatchException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NoCivitasConfigConditionParametersPassedException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/backend/exceptions/NoCivitasConfigConditionParametersPassedException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NoValidValueTypForConfigConditionException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/backend/exceptions/NoValidValueTypForConfigConditionException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/exceptions/NumericConfigConditionOutOfBoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/backend/exceptions/RangedConditionOutOfBoundException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/BuildingConfigFlag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/LocaleFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/localization/LocaleFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/MainConfigFlag.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/flags/RootConfigFlag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/RootConfigFlag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/Building.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/gameobjects/buildings/Building.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasBuildingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasBuildingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasConfigHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasConfigHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/CivitasLocaleHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/localization/CivitasLocaleHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/commands/civRpgCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/commands/civRpgCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigPack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigPack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValue.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueCondition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigEntryCondition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigValueConditionRanged.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/ConfigEntryConditionRanged.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/MainConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/building/BuildingConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/handlers/config/building/BuildingConfigPack.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,21 +44,29 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="package-info" />
+        <option value="Class" />
+        <option value="Interface" />
+        <option value="Enum" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="github/master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="0.0.1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2AdRl9z7ZUeNcCtzshaCuGq6IxW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -47,9 +79,27 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/jonas/it-programming/IDEA-Projects/civitas/src/main/java/io/github/sternstaub/civitasrpg/xpsystem&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.32258064&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/xpsystem" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/events" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/items" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/npc" />
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg/trading" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/io/github/sternstaub/civitasrpg" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,6 +109,70 @@
       <option name="presentableId" value="Default" />
       <updated>1655337628604</updated>
     </task>
+    <task id="LOCAL-00001" summary="added some packages">
+      <created>1655348128800</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655348128800</updated>
+    </task>
+    <task id="LOCAL-00002" summary="added readmes">
+      <created>1655350121647</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655350121647</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add some bits">
+      <created>1655352584876</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655352584876</updated>
+    </task>
+    <task id="LOCAL-00004" summary="add some bits">
+      <created>1655352719072</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655352719072</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Configuration and Localization loaders added">
+      <created>1655369187900</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655369187900</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Configuration and Localization loaders have been expanded to work with multiple config files and folders.&#10;The work concerning config is still not done tho. Next will be flatfile storage.">
+      <created>1655417231571</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1655417231571</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Changes in configuration classes, restructured some other stuff.">
+      <created>1655499640523</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1655499640523</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Introducing ConfigValueCondition, several implementations for config packs">
+      <created>1655611545068</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1655611545068</updated>
+    </task>
+    <task id="LOCAL-00009" summary="smoothened config classes, restructured packages (again)">
+      <created>1655641532030</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655641532030</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -71,5 +185,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added some packages" />
+    <MESSAGE value="added readmes" />
+    <MESSAGE value="add some bits" />
+    <MESSAGE value="Configuration and Localization loaders added" />
+    <MESSAGE value="Configuration and Localization loaders have been expanded to work with multiple config files and folders.&#10;The work concerning config is still not done tho. Next will be flatfile storage." />
+    <MESSAGE value="Changes in configuration classes, restructured some other stuff." />
+    <MESSAGE value="Introducing ConfigValueCondition, several implementations for config packs" />
+    <MESSAGE value="smoothened config classes, restructured packages (again)" />
+    <option name="LAST_COMMIT_MESSAGE" value="smoothened config classes, restructured packages (again)" />
   </component>
 </project>

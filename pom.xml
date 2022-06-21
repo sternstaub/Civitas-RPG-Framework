@@ -6,7 +6,7 @@
 
     <groupId>io.github.sternstaub</groupId>
     <artifactId>CivitasRPG</artifactId>
-    <version>0.0.1-b1</version>
+    <version>0.0.2</version>
     <packaging>jar</packaging>
 
     <name>CivitasRPG</name>
@@ -24,8 +24,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.1</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>16</source>
+                    <target>16</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -70,6 +70,12 @@
             <artifactId>paper-api</artifactId>
             <version>1.19-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.postgresql/postgresql -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.2.8</version>
         </dependency>
     </dependencies>
 </project>
