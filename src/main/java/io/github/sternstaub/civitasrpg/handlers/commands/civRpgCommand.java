@@ -9,7 +9,7 @@ import org.jetbrains.annotations.NotNull;
 public class civRpgCommand implements CommandExecutor {
     CivitasRPG plugin;
     civRpgCommand() {
-        plugin = CivitasRPG.INSTANCE;
+        plugin = CivitasRPG.PLUGIN;
     }
 
     /**

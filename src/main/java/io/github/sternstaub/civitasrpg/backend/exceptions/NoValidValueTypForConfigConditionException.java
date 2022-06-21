@@ -1,4 +1,4 @@
-package io.github.sternstaub.civitasrpg.exceptions;
+package io.github.sternstaub.civitasrpg.backend.exceptions;
 
 public class NoValidValueTypForConfigConditionException extends Exception{
 }

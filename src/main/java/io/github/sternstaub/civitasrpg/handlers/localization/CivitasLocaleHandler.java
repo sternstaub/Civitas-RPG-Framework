@@ -1,7 +1,6 @@
-package io.github.sternstaub.civitasrpg.handlers;
+package io.github.sternstaub.civitasrpg.handlers.localization;
 
 import io.github.sternstaub.civitasrpg.CivitasRPG;
-import io.github.sternstaub.civitasrpg.flags.LocaleFlag;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;
@@ -9,10 +8,10 @@ import java.io.IOException;
 
 public class CivitasLocaleHandler {
 
-    private static final CivitasRPG plugin = CivitasRPG.INSTANCE;
+    private static final CivitasRPG plugin = CivitasRPG.PLUGIN;
     private File langFile;
     private YamlConfiguration langYaml;
-    final String localeFolderPath = CivitasRPG.INSTANCE.dataPath + "lang/";
+    final String localeFolderPath = CivitasRPG.PLUGIN.dataPath + "lang/";
 
     public CivitasLocaleHandler() {
 

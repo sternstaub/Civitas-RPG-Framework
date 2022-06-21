@@ -1,4 +1,4 @@
-package io.github.sternstaub.civitasrpg.flags;
+package io.github.sternstaub.civitasrpg.handlers.localization;
 
 public enum LocaleFlag {
     PLUGIN_INITIALIZATION_COMPLETE("plugin.init_complete",

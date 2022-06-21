@@ -1,9 +1,9 @@
 package io.github.sternstaub.civitasrpg;
 
 import io.github.sternstaub.civitasrpg.handlers.CivitasConfigHandler;
-import io.github.sternstaub.civitasrpg.handlers.CivitasLocaleHandler;
-import io.github.sternstaub.civitasrpg.flags.MainConfigFlag;
-import io.github.sternstaub.civitasrpg.flags.LocaleFlag;
+import io.github.sternstaub.civitasrpg.handlers.localization.CivitasLocaleHandler;
+import io.github.sternstaub.civitasrpg.handlers.config.flags.MainConfigFlag;
+import io.github.sternstaub.civitasrpg.handlers.localization.LocaleFlag;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -11,7 +11,7 @@ import java.util.logging.Level;
 
 public final class CivitasRPG extends JavaPlugin {
 
-    public static CivitasRPG INSTANCE;
+    public static CivitasRPG PLUGIN;
     public final CivitasLocaleHandler locale;
     public final CivitasConfigHandler config;
     public final String dataPath;
@@ -26,7 +26,7 @@ public final class CivitasRPG extends JavaPlugin {
 
     public CivitasRPG() {
         // These two must stand first !
-        INSTANCE = this;
+        PLUGIN = this;
         dataPath = this.getDataFolder().getPath() + "/";
 
         configPath = dataPath + "config/";
@@ -37,7 +37,7 @@ public final class CivitasRPG extends JavaPlugin {
         this.config = new CivitasConfigHandler();
         locale = new CivitasLocaleHandler();
 
-        this.getLogger().log(Level.INFO, "CivitasRPG loaded. \n" +
+        this.getLogger().log(Level.INFO, "CivitasRPG main class initialized. \n" +
                 "Data Path: " + dataPath + "\n" +
                 "configPath: " + configPath);
     }
@@ -61,21 +61,20 @@ public final class CivitasRPG extends JavaPlugin {
     public void onEnable() {
         // Config Loader is initialized in the constructor
 
-        // First, load the locale key (like en, nl, de...) as configured by user.
-        String language = config.MAINCONFIG.getString(
-                MainConfigFlag.LANGUAGE);
-
         /*
         Then buffer the lang messages for given locale key  into the CivitasLocaleLoader so that the messages can be fetched via the plugin.
         The buffer() method also ensures that all missing message-localizations will be replaced by default ones.
          */
+        String language = config.mainConfig.getString(
+                MainConfigFlag.LANGUAGE);
         locale.buffer(language);
 
         // get debugging setting.
-        // when true, the plugin will log more messages to console
-        // in various situations.
-        isDebug = config.MAINCONFIG.getBool(MainConfigFlag.DEBUG);
+        // when true, the plugin will log more messages to console in various situations.
+        isDebug = config.mainConfig.getBool(MainConfigFlag.DEBUG);
         debug(this, "Debugging is on.");
+
+        // TODO : BuildingHandler.loadFromConfigurations(CivitasConfigHandler handler)
 
         log(locale(LocaleFlag.PLUGIN_INITIALIZATION_COMPLETE));
     }
@@ -139,17 +138,20 @@ public final class CivitasRPG extends JavaPlugin {
         this.getLogger().log(Level.INFO, message);
     }
 
-    private String lastDebuggedClassName= "";
-    public void debug(Object o, String message) {
-
+    public void debug(Object o, String message, Boolean isnewsection) {
         if(!isDebug)
             return;
 
-        if(!o.getClass().getSimpleName().equalsIgnoreCase(lastDebuggedClassName))
+        if(isnewsection)
             log("============================================");
-        lastDebuggedClassName = o.getClass().getSimpleName();
 
         log("[DEBUG - Class " + o.getClass().getSimpleName() + "] "
+                + message);
+    }
+    public void debug(Object o, String message) {
+        if(!isDebug)
+            return;;
+        log("[DEBUG - " + o.getClass().getSimpleName() + "] "
                 + message);
     }
 }
