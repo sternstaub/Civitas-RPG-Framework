@@ -1,22 +1,26 @@
-package io.github.sternstaub.civitasrpg.handlers.config;
+package io.github.sternstaub.civitasrpg.handlers.config.conditions;
 
 import io.github.sternstaub.civitasrpg.CivitasRPG;
-import io.github.sternstaub.civitasrpg.exceptions.ConditionParametersClassMismatchException;
-import io.github.sternstaub.civitasrpg.exceptions.NumericConfigConditionOutOfBoundException;
 
-public class ConfigValueCondition {
+import javax.annotation.Nullable;
+
+public class ConfigEntryCondition {
 
     final Class<?> applicableClass;
-    final static CivitasRPG plugin = CivitasRPG.INSTANCE;
+    final static CivitasRPG plugin = CivitasRPG.PLUGIN;
 
 
     /**
-     * A ConfigValueCondition contains: rules which can be applied to objects that are read from yaml-configuration (string or numeric classes).
+     * A ConfigEntryCondition contains: rules which can be applied to objects that are read from yaml-configuration (string or numeric classes).
      * @param targetClass The class to which a config value is parsable for this condition to be fulfilled. Possible values: "String.class", "Integer.class"...
      */
-    public ConfigValueCondition(Class<?> targetClass) {
+    public ConfigEntryCondition(Class<?> targetClass) {
 
         this.applicableClass = targetClass;
+    }
+
+    public ConfigEntryCondition(Object o) {
+        this.applicableClass = o.getClass();
     }
 
     /**
@@ -24,12 +28,25 @@ public class ConfigValueCondition {
      * @param input an object to check on. Only use String.class, or numeric types like Integer.class!
      * @return true when the given object is a valid config entry for this condition
      */
-    public boolean isFulfilledForValueObject(Object input) {
+    public boolean isFulfilledFor(@Nullable Object input) {
+        if(input == null) {
+            plugin.debug(this,"Condition check failed because the input object was null.");
+            return false;
+        }
         if(!classesAreEqual(input.getClass(), applicableClass)) {
-            plugin.debug(this,                                          "Class mismatch: "+input.getClass()+" and "+applicableClass);
+            plugin.debug(this,"Class mismatch: Input '"+input.getClass()+"' does not fit "+applicableClass);
             return false;                                                           // when the given object belongs to a different class than required, the condition is not met.
         }
         return true;
+    }
+    public boolean supportsClassType(Class clazz) {
+        if(applicableClass.equals(clazz))
+            return true;
+        return false;
+    }
+
+    public Class<?> getRequiredClass() {
+        return applicableClass;
     }
 
     protected boolean classesAreEqual(Class<?> a, Class<?> b) {
