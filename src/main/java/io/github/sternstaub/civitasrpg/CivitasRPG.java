@@ -1,9 +1,7 @@
 package io.github.sternstaub.civitasrpg;
 
-import io.github.sternstaub.civitasrpg.handlers.CivitasConfigHandler;
-import io.github.sternstaub.civitasrpg.handlers.localization.CivitasLocaleHandler;
-import io.github.sternstaub.civitasrpg.handlers.config.flags.MainConfigFlag;
-import io.github.sternstaub.civitasrpg.handlers.localization.LocaleFlag;
+import io.github.sternstaub.civitasrpg.flags.config.ConfigFlagsMain;
+import io.github.sternstaub.civitasrpg.flags.config.LocaleConfigFlag;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
@@ -28,14 +26,14 @@ public final class CivitasRPG extends JavaPlugin {
         // These two must stand first !
         PLUGIN = this;
         dataPath = this.getDataFolder().getPath() + "/";
-
         configPath = dataPath + "config/";
 
         // Create config and lang manager instances
         // and link them to static variable
 
         this.config = new CivitasConfigHandler();
-        locale = new CivitasLocaleHandler();
+        locale = new CivitasLocaleHandler((String) config.mainConfig.getEntry(
+                ConfigFlagsMain.LANGUAGE).getValue());
 
         this.getLogger().log(Level.INFO, "CivitasRPG main class initialized. \n" +
                 "Data Path: " + dataPath + "\n" +
@@ -57,26 +55,18 @@ public final class CivitasRPG extends JavaPlugin {
     // ======================
     // =============
 
+// (^ Config Loader is initialized in the constructor ^)
     @Override
     public void onEnable() {
-        // Config Loader is initialized in the constructor
-
-        /*
-        Then buffer the lang messages for given locale key  into the CivitasLocaleLoader so that the messages can be fetched via the plugin.
-        The buffer() method also ensures that all missing message-localizations will be replaced by default ones.
-         */
-        String language = config.mainConfig.getString(
-                MainConfigFlag.LANGUAGE);
-        locale.buffer(language);
 
         // get debugging setting.
         // when true, the plugin will log more messages to console in various situations.
-        isDebug = config.mainConfig.getBool(MainConfigFlag.DEBUG);
+        isDebug = (Boolean) config.mainConfig.getEntry(ConfigFlagsMain.DEBUG).getValue();
         debug(this, "Debugging is on.");
 
         // TODO : BuildingHandler.loadFromConfigurations(CivitasConfigHandler handler)
 
-        log(locale(LocaleFlag.PLUGIN_INITIALIZATION_COMPLETE));
+        log(locale(LocaleConfigFlag.PLUGIN_INITIALIZATION_COMPLETE));
     }
 
 
@@ -123,7 +113,7 @@ public final class CivitasRPG extends JavaPlugin {
     ==========
      */
 
-    public String locale(LocaleFlag loc) {
+    public String locale(LocaleConfigFlag loc) {
         return locale.fetch(loc); }
 
 
