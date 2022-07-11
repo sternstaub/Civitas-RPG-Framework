@@ -1,6 +1,4 @@
-# Civitas RPG Ecosystem
-
-***This section handles the idea and concept behind the Civitas RPG project in general.***
+***This section handles the idea and concept behind the Civitas RPG project in general. For this specific project page, refer to the parts after the next section***
 
 The project Civitas RPG aims to bring a minecraft-based multiplayer role playing experience to minecraft. To achieve this, it forms an ecosystem of multiple plugins. 
 
