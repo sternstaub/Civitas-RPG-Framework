@@ -5,6 +5,8 @@ The project Civitas RPG aims to bring a minecraft-based multiplayer role playing
 
 I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft. From the many days of playing there, i learned that essential RPG concepts can be realized in a simple, yet effective way. In combination with a well-maintained forum and other platforms, people can build true communities, tell great tales and spend a good time with each other. I have learned that using minecraft as a platform for role playing opens up many possibilities and offers a nice amount of flexibility.
 
+Also, i have written the [TownyPlots Extended](https://cursefire.com/minecraft/bukkit-plugins/townyplots) plugin in the past (bukkit times :')). Thus, i will prototype the Civitas Ecosystem on Towny as a starting point. Productive buildings - like they existed in TownyPlots - will definitley be a part of the framework. But also, i intend on introducing guild buildings, so that guilds may buy buildings in different towns to gain influence for example.
+
 Please note that Civitas is, and will be, written for [PaperMC server software](https://papermc.io/). It is not supposed to work on other platforms (tho it aswell might - but i don't support it).
 
 ***This is at an early stage.***
