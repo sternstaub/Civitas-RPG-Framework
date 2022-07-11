@@ -40,14 +40,15 @@ Generally, this framework will provide different packages, for example:
 * Streetmap Module
 * Survival Module (disease / hypothermia)
 
-These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. A Monster CAN drop certain items.  I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The plugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
+These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. A Monster CAN drop certain items.  I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The Framework will mainly provide abstract types and handler classes.
+This means that the CivitasPlugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
 
 ### Specific considerations
 There are some obstacles that should be considered while developing this plugin. Please remember that they only refer
 
 * BuildingFrameworkObjects do not have a world position. They are "roomless". 
 * Generally, FrameworkObjects shall only provide methods to interact with each other.
-* There might be [matrix](https://www.matrix.org)-support for chats
+* I would like to add [matrix](https://www.matrix.org)-support for chats
 * The Framework plugin will also do the data handling. That means to save and load the data of CivitasPlugins, aswell as checking their integrity.
 
 
@@ -55,6 +56,10 @@ There are some obstacles that should be considered while developing this plugin.
 
 Currently working on ***planning stage; pre-release***.
 (there was already an attempt of coding, but i chose to change the concept and decentralize it, so it must be redone)
+
+First, i shall create the first version of the framework plugin. then, based on this, i will revive the old [TownyPlots Extended](https://cursefire.com/minecraft/bukkit-plugins/townyplots) to use this Framework. It will apply the buildings from civitas to towny plots.
+
+
 
 further notes:
 * skill system that allows the players to specialize their craft
