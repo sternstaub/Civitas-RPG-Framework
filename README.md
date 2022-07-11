@@ -13,11 +13,13 @@ Please note that Civitas is, and will be, written for [PaperMC server software](
 
 # The Civitas Framework plugin
 
-***This section is about this plugin / this source code here.*** In other words, it handles the Civitas Framework plugin, which is provides kind of an API for different aspects
+***This section is about this plugin / this source code here.*** 
 
-The classes herein are thus not supposed to hold world-related content (like xyz positions). Instead, it holds archetypes that can be used by CivitasPlugins. Instead, it provides an API for RPG-related stuff. The Framework plugin does not do anything within the game or the world by itself, but other plugins can use it. 
+In other words, it handles the Civitas Framework plugin, which is provides kind of an API for different aspects of role playing. The subplugins can then use the given archetypes to create interactions between the Civitas Modules (read the packages below). To give an example, a guild might function as a city owner, or it might aswell be a bank guild which does not own whole cities, but buys buildings in other players cities to gain some value from it.
+
+However, it must be noted that the classes herein are not supposed to hold world-related content (like xyz positions). Also, don't expect to find many specific implementations in the CivitasFramework. The Framework plugin does not do anything within the game or the world by itself, but other plugins can use it. 
+It holds archetypes that can be used by CivitasPlugins, providing an API for any RPG-related stuff and thus allowing the plugins which implement it to be more dynamic and even interact with other plugins that use Civitas. 
 Consider it to be a blueprint collection.
-
 
 ## General aims
 
@@ -29,6 +31,7 @@ Generally, this framework will provide different packages, for example:
 * Productive Building Module
 * Skill System Module
 * Chat Module
+* Lawsuit Module
 * GUI Module
 * Maybe survival module?
 
@@ -45,8 +48,8 @@ There are some obstacles that should be considered while developing this plugin.
 
 ## Current release stage
 
-Currently working on ***initial release (0.1)***.
- 
+Currently working on ***planning stage; pre-release***.
+(there was already an attempt of coding, but i chose to change the concept and decentralize it, so it must be redone)
 
 further notes:
 * skill system that allows the players to specialize their craft
