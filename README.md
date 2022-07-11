@@ -5,7 +5,7 @@
 The project Civitas RPG aims to bring a minecraft-based multiplayer role playing experience to minecraft. To achieve this, it forms an ecosystem of multiple plugins. 
 
 
-I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft. From the many days of playing there, i learned that essential RPG concepts can be realized in a simple, yet effective way. In combination with a well-maintained forum and other platforms, there
+I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft. From the many days of playing there, i learned that essential RPG concepts can be realized in a simple, yet effective way. In combination with a well-maintained forum and other platforms, people can build true communities, tell great tales and spend a good time with each other. I have learned that using minecraft as a platform for role playing opens up many possibilities and offers a nice amount of flexibility.
 
 Please note that Civitas is, and will be, written for [PaperMC server software](https://papermc.io/). It is not supposed to work on other platforms (tho it aswell might - but i don't support it).
 
