@@ -1,32 +1,57 @@
-# Civitas RPG Framwork
+# Civitas RPG Ecosystem
 
-A plugin for paper-based minecraft servers. It provides an API for RPG-related stuff.
-It does not do anything in the game by itself, but other plugins can use it. 
+***This section handles the idea and concept behind the Civitas RPG project in general.***
 
-The classes herein are thus not supposed to hold world-related content (like xyz positions). Instead, it provides different types of economies (possibility for bank system, gold / item standard, vault support etc.), buildings (possibility to bring RTS-systems in), rpg-talent-systems (linear, perks etc.)
-
-My goal is to create a minecraft-based immersive multiplayer role playing experience through paper plugin ecosystems. for this, i want to use this framework and write subplugins ("Civitas Plugins") that do the "real work". The Civitas Plugins will then attach the classes to each other (for example, handles how guilds can buy buildings).
-
-the features i am thinking of are:
-
-* skill system that allows the players to specialize their craft
-* player towns with real time strategy elements, chunk protection, ressource gain and upkeep (like in [TownyPlots](https://dev.bukkit.org/projects/townyplots) extended, but better)
+The project Civitas RPG aims to bring a minecraft-based multiplayer role playing experience to minecraft. To achieve this, it forms an ecosystem of multiple plugins. 
 
 
-I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft.
+I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft. From the many days of playing there, i learned that essential RPG concepts can be realized in a simple, yet effective way. In combination with a well-maintained forum and other platforms, there
 
+Please note that Civitas is, and will be, written for [PaperMC server software](https://papermc.io/). It is not supposed to work on other platforms (tho it aswell might - but i don't support it).
 
 ***This is at an early stage.***
 
+# The Civitas Framework plugin
 
-# working on initial release (0.1).
- 
+***This section is about this plugin / this source code here.*** In other words, it handles the Civitas Framework plugin, which is provides kind of an API for different aspects
 
-## Provide different modules
+The classes herein are thus not supposed to hold world-related content (like xyz positions). Instead, it holds archetypes that can be used by CivitasPlugins. Instead, it provides an API for RPG-related stuff. The Framework plugin does not do anything within the game or the world by itself, but other plugins can use it. 
+Consider it to be a blueprint collection.
+
+
+## General aims
+
+Generally, this framework will provide different packages, for example:
 
 * Economy Module
 * Custom Item Module
 * Custom Crafting Module
 * Productive Building Module
 * Skill System Module
-* 
+* Chat Module
+* GUI Module
+* Maybe survival module?
+
+These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The plugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
+
+### Specific considerations
+There are some obstacles that should be considered while developing this plugin. Please remember that they only refer
+
+* BuildingFrameworkObjects do not have a world position. They are "roomless". 
+* Generally, FrameworkObjects shall only provide methods to interact with each other.
+* There might be [matrix](https://www.matrix.org)-support for chats
+* The Framework plugin will also do the data handling. That means to save and load the data of CivitasPlugins, aswell as checking their integrity.
+
+
+## Current release stage
+
+Currently working on ***initial release (0.1)***.
+ 
+
+further notes:
+* skill system that allows the players to specialize their craft
+* player towns with real time strategy elements, chunk protection, ressource gain and upkeep (like in [TownyPlots](https://dev.bukkit.org/projects/townyplots) extended, but better) 
+* different types of economies (possibility for bank system, gold / item standard, vault support etc.), buildings (possibility to bring RTS-systems in), rpg-talent-systems (linear, perks etc.)
+
+
+
