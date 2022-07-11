@@ -27,15 +27,20 @@ Generally, this framework will provide different packages, for example:
 
 * Economy Module
 * Custom Item Module
+* Trading / Market Module
 * Custom Crafting Module
+* Town / Civilization Module
 * Productive Building Module
 * Skill System Module
 * Chat Module
 * Lawsuit Module
 * GUI Module
-* Maybe survival module?
+* Monster Module
+* Encounter Module
+* Streetmap Module
+* Survival Module (disease / hypothermia)
 
-These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The plugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
+These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. A Monster CAN drop certain items.  I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The plugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
 
 ### Specific considerations
 There are some obstacles that should be considered while developing this plugin. Please remember that they only refer
