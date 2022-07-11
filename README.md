@@ -37,10 +37,10 @@ Generally, this framework will provide different packages, for example:
 * GUI Module
 * Monster Module
 * Encounter Module
-* Streetmap Module
+* Street / land flagging Module
 * Survival Module (disease / hypothermia)
 
-These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. A Monster CAN drop certain items.  I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The Framework will mainly provide abstract types and handler classes.
+These packages shall be loosely interconnected (Java reflections). That means: a building CAN have a certain type of economy object attached to it. A Monster CAN drop certain items. A guild CAN be settled in a town. I capitalized the "can", because the actual implementation of buildings happens in the Civitas Plugins (kind of child plugins of the framework). The Framework will mainly provide abstract types and handler classes.
 This means that the CivitasPlugins which a server owner chooses to use will also determine which parts of the framework shall be used and which shall not.
 
 ### Specific considerations
