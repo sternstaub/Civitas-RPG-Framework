@@ -29,12 +29,11 @@ Generally, this framework will provide different packages, for example:
 * Custom Item Module
 * Trading / Market Module
 * Custom Crafting Module
-* Town / Civilization Module
-* Productive Building Module
+* Civilization Module (real-time strategy stuff)
 * Skill System Module
 * Chat Module
 * Lawsuit Module
-* GUI Module
+* NPC Module
 * Monster Module
 * Encounter Module
 * Street / land flagging Module
