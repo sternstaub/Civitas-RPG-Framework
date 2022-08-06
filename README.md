@@ -1,6 +1,6 @@
 ***This section handles the idea and concept behind the Civitas RPG project in general. For this specific project page, refer to the parts after the next section***
 
-The project Civitas RPG aims to bring a minecraft-based multiplayer role playing experience to minecraft. To achieve this, it forms an ecosystem of multiple plugins. 
+The project Civitas RPG aims to bring a multiplayer role playing experience to minecraft. To achieve this, it forms an ecosystem of multiple plugins. 
 
 
 I want to thank the [Lyria server and it's staff](https://lyriaserver.de) for all the inspiration regarding the possibilities of minecraft. From the many days of playing there, i learned that essential RPG concepts can be realized in a simple, yet effective way. In combination with a well-maintained forum and other platforms, people can build true communities, tell great tales and spend a good time with each other. I have learned that using minecraft as a platform for role playing opens up many possibilities and offers a nice amount of flexibility.
