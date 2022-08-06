@@ -9,7 +9,8 @@ Also, i have written the [TownyPlots Extended](https://www.curseforge.com/minecr
 
 Please note that Civitas is, and will be, written for [PaperMC server software](https://papermc.io/). It is not supposed to work on other platforms (tho it aswell might - but i don't support it).
 
-***This is at an early stage.***
+***This is at an early stage.*** Also, i am just a single man, and i attend to this plugin in my spare time. Don't expect usable releases any time soon.
+If you want to accellerate the process, feel free to contribute :) 
 
 # The Civitas Framework plugin
 
